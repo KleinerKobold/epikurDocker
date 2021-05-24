@@ -1,0 +1,14 @@
+Epikur docker Image
+===================
+
+Directory structure
+-------------------
+
+- build.sh: Here you can do all the stuff to prepare the build. Finally, this script will call the docker build command.
+- Dockerfile: Normal dockerfile that will be invoked by build.sh.
+- entrypoint.sh: The entry point of the container. Allows us to perform tasks when the container starts (like parse environment variables) and print debugging info
+
+Filesystem attach
+-----------------
+
+You have to map /root/EpikurServer to the data directory of your Epikur installation.
