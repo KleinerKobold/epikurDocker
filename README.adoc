@@ -1,5 +1,15 @@
 Epikur docker Image
 ===================
+Disclaimer
+----------
+I am a user, that wants to use the software in a docker environment. If you have any questions to the software please contact info@epikur.de
+
+.Epikur contact
+****
+Epikur Software & IT-Service GmbH & Co. KG
+Helmholtzstr. 2–9
+10587 Berlin
+****
 
 Directory structure
 -------------------
