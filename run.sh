@@ -1,4 +1,2 @@
-docker run -ti --rm \
-       -e DISPLAY=$DISPLAY \
-       -v /tmp/.X11-unix:/tmp/.X11-unix \
+docker run --rm epikur:latest \
        /usr/share/epikur4Server/bin/start.sh
