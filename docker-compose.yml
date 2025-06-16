@@ -1,0 +1,10 @@
+services:
+  epikurServer:
+    image: epikur:latest #${EPIKUR_IMAGE}
+    container_name: epikurServer
+    ports:
+      - "${HOST_PORT}:8080"
+    volumes:
+      - "${HOST_EPISERVER_DIR}:/root/EpikurServer"
+    command: /usr/share/epikur4Server/bin/start.sh
+    restart: unless-stopped

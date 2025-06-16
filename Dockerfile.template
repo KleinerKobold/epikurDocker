@@ -1,10 +1,10 @@
 #syntax=docker/dockerfile:1
 FROM debian:bookworm
 RUN mkdir /app
-COPY ./epikur4Server-25.2.1.5-all.deb /app
+COPY ./%DEB_FILE% /app
 RUN apt-get update && \
-    apt-get install -y /app/epikur4Server-25.2.1.5-all.deb && \
-    rm /app/epikur4Server-25.2.1.5-all.deb && \
+    apt-get install -y /app/%DEB_FILE% && \
+    rm /app/%DEB_FILE% && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

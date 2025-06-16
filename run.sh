@@ -1,8 +1,9 @@
-docker run \
-       --rm \
-       -d \
-       -v /home/oliver/docker/epikurDocker/EpikurServer:/root/EpikurServer \
-       -p 9980:8080 \
-       --name epikurServer \
-       epikur:latest \
-       /usr/share/epikur4Server/bin/start.sh
+#!/bin/bash
+
+# .env_tag zusätzlich zur normalen .env einlesen
+set -o allexport
+[ -f .env ] && source .env
+[ -f .env_tag ] && source .env_tag
+set +o allexport
+
+docker compose up -d
